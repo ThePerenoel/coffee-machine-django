@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'api'
 ]
 
@@ -76,11 +77,12 @@ WSGI_APPLICATION = 'coffee_machine.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.postgresql",
-        "OPTIONS": {
-            "service": "my_service",
-            "passfile": ".my_pgpass",
-        },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'coffee_machine',
+        'USER': 'coffee_admin',
+        'PASSWORD': 'coffeeForever9605',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
